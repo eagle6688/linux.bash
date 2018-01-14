@@ -1,13 +1,13 @@
 #!/bin/bash
 echo $0
 
-while getopts :asd:qwe opt; do
-    case $opts in
-        asd)
-            echo "asd:$OPTARG"
+while getopts ":a:b" option; do
+    case $option in
+        a)
+            echo "a:$OPTARG"
             ;;
-        qwe)
-            echo "qwe:$OPTARG"
+        b)
+            echo "b:$OPTARG"
             ;;
         :)
             echo "$OPTARG needs an argument"
@@ -16,7 +16,7 @@ while getopts :asd:qwe opt; do
             echo "Invalid option: -$OPTARG"   
             ;;  
         *)
-            echo "$opt not recognized"
+            echo "$option not recognized"
             ;;
     esac
 done
