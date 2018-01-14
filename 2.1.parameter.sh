@@ -12,6 +12,9 @@ while getopts :asd:qwe opt; do
         :)
             echo "$OPTARG needs an argument"
             ;;
+        ?)
+            echo "Invalid option: -$OPTARG"   
+            ;;  
         *)
             echo "$opt not recognized"
             ;;
